@@ -1,0 +1,200 @@
+/* --- Fonts --- */
+@import url('https://fonts.googleapis.com/css2?family=Jolly+Lodger&display=swap'); /* For comic-style text */
+
+/* --- Global Styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    overflow-x: hidden; /* Prevent horizontal scrollbar */
+    background-color: #0c0a1f; /* Fallback for the background */
+}
+
+/* --- Header / Navigation --- */
+header {
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    z-index: 100;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: #f0e68c;
+    font-family: 'Jolly Lodger', cursive;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    padding: 5px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    background-color: #0c0a1f;
+    text-shadow: 1px 1px 0 #000;
+    display: block;
+}
+
+.main-nav ul li a:hover {
+    background-color: #f0e68c;
+    color: #0c0a1f;
+    transform: scale(1.05);
+    text-shadow: none;
+}
+
+.main-nav ul li a.active {
+    background-color: #f0e68c;
+    color: #0c0a1f;
+    text-shadow: none;
+}
+
+
+.contact-section {
+    position: relative;
+    width: 100vw;
+    min-height: 100vh;
+    /* FIXED PATH */
+    background-image: url('../assests/images/photo_2025-10-23_14-10-12.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 80px;
+    padding-bottom: 250px;
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 80%;
+    max-width: 1200px;
+    margin-top: 50px;
+    z-index: 10;
+    gap: 50px;
+}
+
+.about-me-section {
+    flex: 1;
+    color: #fff;
+    text-align: left;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    border: 2px solid #f0e68c;
+}
+
+.about-me-section h1 {
+    font-family: 'Jolly Lodger', cursive;
+    font-size: 3rem;
+    color: #f0e68c;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 0 #000;
+}
+
+.about-me-section p {
+    font-family: Arial, sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #e0e0e0;
+}
+
+.contact-form-section {
+    flex: 1;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+    border: 2px solid #f0e68c;
+    text-align: left;
+}
+
+.contact-form-section h1 {
+    font-family: 'Jolly Lodger', cursive;
+    font-size: 3rem;
+    color: #f0e68c;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 0 #000;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    font-family: 'Jolly Lodger', cursive;
+    font-size: 1.5rem;
+    color: #f0e68c;
+    margin-bottom: 8px;
+    text-shadow: 1px 1px 0 #000;
+}
+
+.underline-input {
+    width: 100%;
+    padding: 5px 0;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #f0e68c;
+    color: #fff;
+    font-size: 1.1rem;
+    font-family: Arial, sans-serif;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.underline-input:focus {
+    border-bottom-color: #fff;
+}
+
+textarea.underline-input {
+    resize: vertical;
+    min-height: 80px;
+    padding-top: 10px;
+}
+
+.send-button {
+    background-color: #e74c3c;
+    color: #fff;
+    font-family: 'Jolly Lodger', cursive;
+    font-size: 1.8rem;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 3px 3px 0 #c0392b;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-top: 20px;
+    float: right;
+    transform: rotate(5deg);
+}
+
+.send-button:hover {
+    transform: rotate(5deg) translateY(-2px);
+    box-shadow: 5px 5px 0 #a52a2a;
+}
+
+
+.cityscape-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 300%;
+    height: 300px;
+    /*background-image: url('../assests/images/—Pngtree—city silhouette city building building_3822039.png');*/
+    background-repeat: repeat-x;
+    background-size: auto 100%;
+    z-index: 50;
+}

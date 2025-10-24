@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Jolly+Lodger&display=swap'); /* For comic-style text */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    overflow-x: hidden;
+    background-color: #0c0a1f;
+}
+
+
+.hero-section {
+    position: relative;
+    width: 100vw;
+    min-height: 100vh;
+    background-image: url('../assests/images/IMG_6181.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 80px;
+    padding-bottom: 250px;
+}
+
+
+header {
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    z-index: 100;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: #f0e68c;
+    font-family: 'Jolly Lodger', cursive;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    padding: 5px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    background-color: #0c0a1f;
+    text-shadow: 1px 1px 0 #000;
+    display: block;
+}
+
+.main-nav ul li a:hover {
+    background-color: #f0e68c;
+    color: #0c0a1f;
+    transform: scale(1.05);
+    text-shadow: none;
+}
+
+.main-nav ul li a.active {
+    background-color: #f0e68c;
+    color: #0c0a1f;
+    text-shadow: none;
+}
+
+
+.decor-moon {
+    position: absolute;
+    top: -100px;
+    left: -80px;
+    width: 400px;
+    z-index: 10;
+}
+
+.decor-bats {
+    position: absolute;
+    top: 80px;
+    left: 40px;
+    width: 280px;
+    z-index: 11;
+}
+
+.decor-zzz {
+    position: absolute;
+    top: 60px;
+    left: 220px;
+    width: 200px;
+    z-index: 12;
+    transform: rotate(5deg);
+}
+
+
+.profile-container {
+    position: relative;
+    left: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    z-index: 20;
+    gap: 140px;
+}
+
+.profile-image {
+    width: 400px;
+    height: 500px;
+    object-fit: cover;
+
+
+}
+
+.profile-info {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 15px 25px;
+    border-radius: 10px;
+    text-align: left;
+    min-width: 200px;
+    position: relative;
+    z-index: 1;
+    border: 2px solid #f0e68c;
+    box-shadow: 0 0 15px rgba(240, 230, 140, 0.5);
+}
+
+.profile-info h2 {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+    color: #f0e68c;
+    font-family: 'Jolly Lodger', cursive;
+    letter-spacing: 2px;
+}
+
+.profile-info p {
+    font-size: 1.2rem;
+    line-height: 1.3;
+}
+
+.connector-line {
+    position: absolute;
+    width: 120px;
+    height: 3px;
+    background-color: #f0e68c;
+    box-shadow: 0 0 10px #f0e68c;
+    border-radius: 5px;
+    top: 250px;
+    left: calc(50% - 60px);
+    z-index: 2;
+    transform: rotate(15deg);
+}
+
+
+.cityscape-container {
+    position: absolute;
+    bottom: -155px;
+    left: 0;
+    width: 400%;
+    height: 600px;
+
+    background-image: url('../assests/images/—Pngtree—city silhouette city building building_3822039.png');
+    background-repeat: repeat-x;
+    background-size: auto 100%;
+    z-index: 55;
+
+}
+
+
+.decor-cloud {
+    position: absolute;
+    height: 350px;
+    width: 350px;
+    z-index: 50;
+}
+
+.cloud-left {
+    bottom: 100px;
+    left: 100px;
+    transform: rotate(-10deg);
+}
+
+.cloud-right {
+    bottom: 100px;
+    right: 80px;
+    transform: rotate(5deg);
+}
+
+.welcome-text {
+    position: absolute;
+    bottom: 150px;
+    font-family: 'Jolly Lodger', cursive;
+    font-size: 9rem;
+    color: #f0e68c;
+    text-shadow:
+            -3px -3px 0 #333,
+            3px -3px 0 #333,
+            -3px 3px 0 #333,
+            3px 3px 0 #333,
+            5px 5px 0 #e74c3c,
+            7px 7px 0 #c0392b;
+    z-index: 60;
+    letter-spacing: 5px;
+    transform: rotate(-5deg);
+}
+
+
+@keyframes slideCity {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-33.33%);
+    }
+}

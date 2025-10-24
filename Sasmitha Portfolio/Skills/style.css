@@ -1,0 +1,139 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Jolly+Lodger&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    overflow-x: hidden;
+    background-color: #0c0a1f;
+}
+
+
+header {
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    z-index: 100;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: #f0e68c;
+    font-family: 'Jolly Lodger', cursive;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    padding: 5px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    background-color: #0c0a1f;
+    text-shadow: 1px 1px 0 #000;
+    display: block;
+}
+
+.main-nav ul li a:hover {
+    background-color: #f0e68c;
+    color: #0c0a1f;
+    transform: scale(1.05);
+    text-shadow: none;
+}
+
+.main-nav ul li a.active {
+    background-color: #f0e68c;
+    color: #0c0a1f;
+    text-shadow: none;
+}
+
+
+.skills-section {
+    position: relative;
+    width: 100vw;
+    min-height: 100vh;
+    background-image: url('../assests/images/photo_2025 purple.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 20px 150px 20px;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 90%;
+    max-width: 1300px;
+    gap: 50px;
+    z-index: 10;
+}
+
+
+.text-column {
+    flex: 1;
+    min-width: 300px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 15px;
+    border: 2px solid #f0e68c;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.text-column h1 {
+    font-family: 'Jolly Lodger', cursive;
+    font-size: 3rem;
+    color: #f0e68c;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 0 #000;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.text-column p {
+    font-family: 'Jolly Lodger', cursive;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    color: #e0e0e0;
+    text-align: justify;
+}
+
+
+
+.skill-icon-bar {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    z-index: 50;
+}
+
+.skill-icon-bar img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+    transition: all 0.3s ease;
+}
+
+.skill-icon-bar img:hover {
+    transform: scale(1.15);
+}

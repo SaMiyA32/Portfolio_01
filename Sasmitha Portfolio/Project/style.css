@@ -1,0 +1,158 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Jolly+Lodger&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    overflow-x: hidden;
+    background-color: #0c0a1f;
+}
+
+
+header {
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    z-index: 100;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: #f0e68c;
+    font-family: 'Jolly Lodger', cursive;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    padding: 5px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    background-color: #0c0a1f;
+    text-shadow: 1px 1px 0 #000;
+    display: block;
+}
+
+.main-nav ul li a:hover {
+    background-color: #f0e68c;
+    color: #0c0a1f;
+    transform: scale(1.05);
+    text-shadow: none;
+}
+
+.main-nav ul li a.active {
+    background-color: #f0e68c;
+    color: #0c0a1f;
+    text-shadow: none;
+}
+
+
+.project-section {
+    position: relative;
+    width: 100vw;
+    min-height: 100vh;
+
+    background-image: url('../assests/images/Gemini_Generated_Image_izou3oizou3oizou.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 120px 20px 50px 20px;
+}
+
+.main-title {
+    font-family: 'Jolly Lodger', cursive;
+    font-size: 4rem;
+    color: #f0e68c;
+    text-shadow: 3px 3px 0 #000;
+    margin-bottom: 40px;
+}
+
+.project-container {
+    width: 90%;
+    max-width: 1200px;
+}
+
+.project-card {
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 2px solid #f0e68c;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+    margin-bottom: 40px;
+}
+
+.project-card h2 {
+    font-family: 'Jolly Lodger', cursive;
+    font-size: 3rem;
+    color: #f0e68c;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 0 #000;
+}
+
+.project-card p {
+    font-family: 'Jolly Lodger', cursive;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    color: #e0e0e0;
+    text-align: center;
+    margin-bottom: 30px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.project-gallery {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.project-gallery img {
+    max-width: 45%;
+    min-width: 300px;
+    border-radius: 10px;
+    border: 3px solid #f0e68c;
+    transition: transform 0.3s ease;
+}
+
+.project-gallery img:hover {
+    transform: scale(1.03);
+}
+
+
+.project-links {
+    margin-top: 30px;
+    text-align: right;
+}
+
+.cta-button {
+    text-decoration: none;
+    color: #0c0a1f;
+    background-color: #f0e68c;
+    font-family: 'Jolly Lodger', cursive;
+    font-size: 1.5rem;
+    padding: 10px 25px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #fff;
+    transform: scale(1.05);
+}
