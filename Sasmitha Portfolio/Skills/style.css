@@ -1,6 +1,28 @@
+/* --- Imports & Keyframes (Unchanged) --- */
+@import url('https://fonts.googleapis.com/css2?family=Jolly+Lodger&family=Lato:wght@400;700&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Jolly+Lodger&display=swap');
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
+@keyframes popIn {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+/* ------------------------------------- */
 
 * {
     margin: 0;
@@ -9,24 +31,27 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Lato', Arial, sans-serif;
     color: #ffffff;
     overflow-x: hidden;
     background-color: #0c0a1f;
 }
 
-
+/* --- Header (Unchanged) --- */
 header {
     position: absolute;
     top: 20px;
     right: 50px;
     z-index: 100;
+    transition: all 0.3s ease;
 }
 
 .main-nav ul {
     list-style: none;
     display: flex;
     gap: 15px;
+    transition: all 0.3s ease;
+    justify-content: flex-end;
 }
 
 .main-nav ul li a {
@@ -55,7 +80,10 @@ header {
     color: #0c0a1f;
     text-shadow: none;
 }
+/* ------------------------------------- */
 
+
+/* === NEW LAYOUT STARTS HERE === */
 
 .skills-section {
     position: relative;
@@ -68,31 +96,50 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 120px 20px 150px 20px;
+
+    /* Change padding and add gap for stacking cards */
+    padding: 120px 20px 50px 20px;
+    gap: 30px; /* This spaces out the cards */
 }
 
-.content-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+/* NEW: Main Page Title */
+.page-title {
+    font-family: 'Jolly Lodger', cursive;
+    font-size: 4rem;
+    color: #f0e68c;
+    text-shadow: 3px 3px 0 #000;
+    margin-bottom: 10px;
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+
+/* NEW: Style for ALL cards */
+.skill-card {
     width: 90%;
-    max-width: 1300px;
-    gap: 50px;
-    z-index: 10;
-}
-
-
-.text-column {
-    flex: 1;
-    min-width: 300px;
+    max-width: 900px; /* Matches project card width */
     background-color: rgba(0, 0, 0, 0.6);
     padding: 30px;
     border-radius: 15px;
     border: 2px solid #f0e68c;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+
+    /* Animation for the cards */
+    opacity: 0;
+    animation: fadeInUp 0.7s ease-out forwards;
+
+    /* Add transition for mobile changes */
+    transition: width 0.3s ease, padding 0.3s ease;
 }
 
+/* Stagger the card animations */
+.skill-card:nth-of-type(2) {
+    animation-delay: 0.2s;
+}
+.skill-card:nth-of-type(3) {
+    animation-delay: 0.4s;
+}
+
+
+/* Specific style for text cards */
 .text-column h1 {
     font-family: 'Jolly Lodger', cursive;
     font-size: 3rem;
@@ -106,34 +153,192 @@ header {
 }
 
 .text-column p {
-    font-family: 'Jolly Lodger', cursive;
-    font-size: 1.6rem;
+    font-family: 'Lato', Arial, sans-serif;
+    font-size: 1.1rem;
     line-height: 1.7;
     color: #e0e0e0;
     text-align: justify;
 }
 
-
-
-.skill-icon-bar {
-    position: absolute;
-    bottom: 40px;
-    left: 0;
-    width: 100%;
+/* Specific style for the icon card */
+.icon-card {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 40px;
-    z-index: 50;
 }
 
-.skill-icon-bar img {
+.skill-item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Pop-in animation for icons */
+    opacity: 0;
+    animation: popIn 0.5s ease-out forwards;
+}
+
+/* Stagger icon animations (delay starts after card fades in) */
+.icon-card .skill-item:nth-child(1) { animation-delay: 0.8s; }
+.icon-card .skill-item:nth-child(2) { animation-delay: 0.9s; }
+.icon-card .skill-item:nth-child(3) { animation-delay: 1.0s; }
+.icon-card .skill-item:nth-child(4) { animation-delay: 1.1s; }
+.icon-card .skill-item:nth-child(5) { animation-delay: 1.2s; }
+.icon-card .skill-item:nth-child(6) { animation-delay: 1.3s; }
+.icon-card .skill-item:nth-child(7) { animation-delay: 1.4s; }
+
+
+.skill-item img {
     height: 60px;
     width: auto;
     object-fit: contain;
     transition: all 0.3s ease;
 }
 
-.skill-icon-bar img:hover {
+.skill-item img:hover {
     transform: scale(1.15);
+    filter: drop-shadow(0 0 10px #f0e68c);
+}
+
+.skill-item img:active {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 5px #f0e68c);
+}
+
+/* Tooltip Styles (Unchanged) */
+.skill-item span {
+    position: absolute;
+    bottom: 85px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #0c0a1f;
+    color: #f0e68c;
+    padding: 5px 12px;
+    border-radius: 5px;
+    border: 1px solid #f0e68c;
+    font-family: 'Jolly Lodger', cursive;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 60;
+}
+.skill-item span::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: #f0e68c transparent transparent transparent;
+}
+.skill-item:hover span {
+    opacity: 1;
+    visibility: visible;
+    bottom: 95px;
+}
+/* ------------------------------------- */
+
+
+/* ===============================================
+MEDIA QUERIES
+===============================================
+*/
+
+/* --- For Tablets and Small Laptops --- */
+@media (max-width: 900px) {
+    header {
+        top: 10px;
+        right: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .main-nav ul {
+        justify-content: center;
+        gap: 10px;
+        padding: 0 10px;
+    }
+
+    .main-nav ul li a {
+        font-size: 1.4rem;
+        padding: 8px 12px;
+    }
+
+    .skills-section {
+        padding-top: 150px; /* More space for wrapped nav */
+    }
+}
+
+
+/* --- For Mobile Phones --- */
+@media (max-width: 768px) {
+    .skills-section {
+        padding: 150px 10px 40px 10px;
+        gap: 20px;
+    }
+
+    header {
+        top: 10px;
+    }
+
+    .main-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .main-nav ul li a {
+        font-size: 1.4rem;
+        padding: 8px 12px;
+    }
+
+    .page-title {
+        font-size: 2.8rem;
+        margin-bottom: 0;
+    }
+
+    .skill-card {
+        width: 85%; /* ALL cards are 85% wide */
+        padding: 20px;
+    }
+
+    /* === THIS IS THE FIX === */
+    .skill-card.text-column {
+        /* Make ONLY text cards taller */
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    /* === END OF FIX === */
+
+    .text-column h1 {
+        font-size: 2.2rem;
+    }
+
+    .text-column p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .icon-card {
+        gap: 20px;
+        padding: 25px 15px;
+    }
+
+    .skill-item {
+        width: 70px;
+    }
+
+    .skill-item img {
+        height: 50px;
+        width: 100%;
+        object-fit: contain;
+    }
 }
