@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Jolly+Lodger&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap');
 
-/* --- Global Styles --- */
+
 * {
     margin: 0;
     padding: 0;
@@ -12,8 +12,8 @@
 body {
     font-family: Arial, sans-serif;
     color: #ffffff;
-    overflow-x: hidden; /* Prevent horizontal scrollbar */
-    background-color: #0c0a1f; /* Fallback for the background */
+    overflow-x: hidden;
+    background-color: #0c0a1f;
 }
 
 /* --- Header / Navigation --- */
@@ -69,7 +69,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start; /* <-- FINAL FIX: Was 'center' */
+    justify-content: flex-start;
     padding-top: 80px;
     padding-bottom: 20px;
 }
@@ -201,7 +201,7 @@ textarea.underline-input {
     padding-top: 10px;
 }
 
-/* --- Small Comic "Burst" Button (Desktop) --- */
+
 .send-button {
     background-color: #e74c3c;
     color: #fff;
@@ -238,7 +238,7 @@ textarea.underline-input {
     transition: all 0.1s ease-in;
 }
 
-/* --- Social Icon Styles --- */
+
 .social-links {
     text-align: center;
     margin-top: 25px;
@@ -258,19 +258,6 @@ textarea.underline-input {
     color: #fff;
     transform: scale(1.2) rotate(10deg);
     text-shadow: 0 0 15px #fff;
-}
-
-/* --- Cityscape (Commented out) --- */
-.cityscape-container {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 300%;
-    height: 300px;
-    /*background-image: url('../assests/images/—Pngtree—city silhouette city building building_3822039.png');*/
-    background-repeat: repeat-x;
-    background-size: auto 100%;
-    z-index: 50;
 }
 
 
@@ -295,7 +282,7 @@ textarea.underline-input {
 /* --- For mobile phones --- */
 @media (max-width: 600px) {
 
-    /* --- Center the nav links --- */
+
     header {
         position: relative;
         top: 0;
@@ -310,13 +297,13 @@ textarea.underline-input {
         gap: 10px;
     }
 
-    /* --- Adjust main section padding --- */
+
     .contact-section {
         padding-top: 20px;
         padding-bottom: 30px;
     }
 
-    /* --- Adjust card layout --- */
+
     .content-wrapper {
         width: 95%;
         margin-top: 15px;
@@ -328,7 +315,7 @@ textarea.underline-input {
         padding: 20px;
     }
 
-    /* --- Center the profile picture --- */
+
     .profile-pic {
         float: none;
         display: block;
@@ -337,7 +324,7 @@ textarea.underline-input {
         margin: 0 auto 20px auto;
     }
 
-    /* --- Center titles and text --- */
+
     .about-me-section h1,
     .contact-form-section h1 {
         text-align: center;
@@ -348,14 +335,14 @@ textarea.underline-input {
         text-align: center;
     }
 
-    /* --- FIX FOR BROKEN MOBILE BUTTON --- */
+
     .send-button {
         float: none;
         display: block;
         margin: 30px auto 0 auto;
         transform: rotate(0deg);
 
-        /* --- NEW RULES TO FIX SHAPE --- */
+
         clip-path: none;
         border-radius: 8px;
         padding: 10px 30px;

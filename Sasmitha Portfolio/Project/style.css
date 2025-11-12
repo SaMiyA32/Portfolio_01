@@ -65,8 +65,6 @@ header {
     flex-direction: column;
     align-items: center;
     padding: 120px 20px 50px 20px;
-
-    /* This is the line we added last time */
     background-attachment: fixed;
 }
 
@@ -179,31 +177,30 @@ header {
     }
 
     .main-nav ul {
-        flex-wrap: wrap; /* Allow nav items to stack */
-        justify-content: center; /* Center the links */
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 10px;
     }
 
     /* --- Main Section Layout --- */
     .project-section {
-        /* Reduce top padding because nav is no longer absolute */
         padding-top: 40px;
         padding-left: 15px;
         padding-right: 15px;
-        background-attachment: scroll; /* 'fixed' is often buggy on mobile */
+        background-attachment: scroll;
     }
 
-    /* --- Typography --- */
+
     .main-title {
-        font-size: 3rem; /* Reduce from 4rem */
+        font-size: 3rem;
     }
 
     .project-card h2 {
-        font-size: 2.25rem; /* Reduce from 3rem */
+        font-size: 2.25rem;
     }
 
     .project-card p {
-        font-size: 1.3rem; /* Reduce from 1.6rem */
+        font-size: 1.3rem;
         line-height: 1.5;
     }
 
@@ -213,31 +210,12 @@ header {
 
     /* --- Project Gallery --- */
     .project-gallery img {
-        max-width: 100%; /* Let images stack vertically */
+        max-width: 100%;
         min-width: 280px;
     }
 
-    /* --- Buttons --- */
+
     .project-links {
-        text-align: center; /* Center the 'View Code' button */
-    }
-}
-
-/* --- For Small Mobile Phones --- */
-@media (max-width: 480px) {
-    .main-title {
-        font-size: 2.5rem;
-    }
-
-    .project-card h2 {
-        font-size: 2rem;
-    }
-
-    .project-card p {
-        font-size: 1.2rem;
-    }
-
-    .project-gallery img {
-        min-width: 100%; /* Force to 100% width */
+        text-align: center;
     }
 }
